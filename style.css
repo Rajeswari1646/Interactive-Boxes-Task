@@ -1,77 +1,203 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+/* CORE RESET */
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
+/* NOTICE BAR */
+.notice {
+background: #b2ff00;
+text-align: center;
+font-weight: 700;
+padding: 10px;
 }
 
-.container {
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* CARD WRAPPER */
+.card {
+max-width: 430px;
+margin: 35px auto;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+padding: 28px 22px 30px;
 }
 
-.box {
-  background-color: white;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  cursor: pointer;
+/* HEADINGS */
+.title {
+color: #e91e63;
+text-align: center;
+margin-bottom: 24px;
+font-size: 22px;
 }
 
-.box-header {
-  padding: 16px;
-  font-weight: bold;
-  font-size: 18px;
-  background-color: #f0f0f0;
-  border-bottom: 1px solid #ddd;
+/* UNIT BOX */
+.unit {
+border: 1px solid #dcdcdc;
+border-radius: 8px;
+margin-bottom: 20px;
+transition: border-color 0.25s, background 0.25s;
+padding-bottom: 12px;
+}
+.unit.open {
+border-color: #e91e63;
+background: #fff6f9;
 }
 
-.box-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 16px;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+/* UNIT HEADER (Flex Row) */
+.unit-head {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+padding: 16px;
+cursor: pointer;
+position: relative;
 }
 
-.box.expanded .box-content {
-  max-height: 300px;
-  padding: 16px;
+/* RADIO BUTTON */
+.unit-head input[type="radio"] {
+display: none;
+}
+.custom-radio {
+width: 16px;
+height: 16px;
+border: 2px solid #e91e63;
+border-radius: 50%;
+margin-top: 3px;
+}
+.unit.open .custom-radio {
+background: #e91e63;
 }
 
-p {
-  margin: 10px 0 5px;
-  font-size: 14px;
+/* POPULAR TAG */
+.popular-tag {
+position: absolute;
+right: 12px;
+top: -10px;
+background: #e91e63;
+color: #fff;
+font-size: 11px;
+font-weight: 700;
+padding: 3px 10px;
+border-radius: 6px;
 }
 
-.buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+/* UNIT INFO SECTION */
+.unit-info {
+display: flex;
+flex-direction: column;
+flex: 1;
+gap: 6px;
+}
+.unit-name {
+font-weight: 700;
+}
+.desc {
+font-size: 12px;
+color: #555;
 }
 
-button {
-  padding: 8px 12px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.2s ease;
+/* PRICE + BADGE SECTION */
+.price-badge {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 8px;
 }
 
-button:hover {
-  background-color: #0056b3;
+.price {
+font-weight: 700;
+white-space: nowrap;
+font-size: 15px;
 }
+.old {
+color: #9d9d9d;
+text-decoration: line-through;
+font-size: 12px;
+margin-left: 4px;
+}
+.badge {
+background: #e91e63;
+color: #fff;
+font-size: 11px;
+padding: 2px 6px;
+border-radius: 4px;
+margin-left: 8px;
+}
+
+/* DETAILS DROPDOWN */
+.details {
+display: none;
+padding: 0 16px 14px;
+margin-top: 12px;
+}
+.unit.open .details {
+display: block;
+}
+
+.details table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+}
+
+.details th {
+text-align: left;
+font-size: 12px;
+color: #666;
+padding-bottom: 4px;
+}
+.details td {
+padding: 4px 0;
+}
+.details select {
+width: 100%;
+padding: 4px;
+border-radius: 4px;
+border: 1px solid #ccc;
+}
+
+/* SUMMARY (Delivery + Total) */
+.summary {
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 14px;
+margin-top: 16px;
+padding: 0 16px;
+}
+
+.delivery {
+color: #e91e63;
+}
+.total {
+font-weight: 700;
+}
+.total strong {
+font-size: 16px;
+}
+
+/* BUTTON */
+.btn-cart {
+margin-top: 20px;
+width: 100%;
+padding: 12px 0;
+background: #e91e63;
+border: none;
+color: #fff;
+font-size: 16px;
+border-radius: 8px;
+cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+text-align: center;
+font-size: 12px;
+color: #888;
+margin-top: 20px;
+}
+
+
