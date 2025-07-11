@@ -1,67 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Boxes</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOGO Offer</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="container">
-    <div class="box" id="box1">
-      <div class="box-header">Top Box</div>
-      <div class="box-content">
-        <p>Choose a Color:</p>
-        <div class="buttons">
-          <button>Red</button>
-          <button>Blue</button>
-          <button>Green</button>
-        </div>
-        <p>Choose a Size:</p>
-        <div class="buttons">
-          <button>Small</button>
-          <button>Medium</button>
-          <button>Large</button>
-        </div>
-      </div>
-    </div>
+<!-- Lime‑green notice bar -->
+<div class="notice">Do not comment anything on Figma</div>
 
-    <div class="box" id="box2">
-      <div class="box-header">Middle Box</div>
-      <div class="box-content">
-        <p>Choose a Color:</p>
-        <div class="buttons">
-          <button>Yellow</button>
-          <button>Purple</button>
-          <button>Orange</button>
-        </div>
-        <p>Choose a Size:</p>
-        <div class="buttons">
-          <button>Small</button>
-          <button>Medium</button>
-          <button>Large</button>
-        </div>
-      </div>
-    </div>
+<main class="card">
+<h2 class="title">YAY! It's BOGO</h2>
 
-    <div class="box" id="box3">
-      <div class="box-header">Bottom Box</div>
-      <div class="box-content">
-        <p>Choose a Color:</p>
-        <div class="buttons">
-          <button>Pink</button>
-          <button>Gray</button>
-          <button>Black</button>
-        </div>
-        <p>Choose a Size:</p>
-        <div class="buttons">
-          <button>Small</button>
-          <button>Medium</button>
-          <button>Large</button>
-        </div>
-      </div>
-    </div>
-  </main>
-  <script src="script.js"></script>
+<!-- PRICING OPTIONS -->
+<form id="unit-form">
+
+<!-- 1 UNIT -->
+<section class="unit open" data-units="1">
+<label class="unit-head">
+<input type="radio" name="unit" value="1" checked>
+<span class="custom-radio"></span>
+
+<div class="unit-info">
+<div class="top-line">
+<span class="unit-name">1 Unit</span>
+<span class="badge">10% Off</span>
+<span class="price">$09.00</span>
+</div>
+<div class="bottom-line">
+<span class="old">Standard Price:</span>
+<span class="usd">$12.00 USD</span>
+</div>
+</div>
+
+<span class="popular-tag">MOST POPULAR</span>
+</label>
+<div class="details"></div>
+</section>
+
+<!-- 2 UNITS -->
+<section class="unit" data-units="2">
+<label class="unit-head">
+<input type="radio" name="unit" value="2">
+<span class="custom-radio"></span>
+
+<div class="unit-info">
+<div class="top-line">
+<span class="unit-name">2 Units</span>
+<span class="badge">20% Off</span>
+<span class="price">$18.00</span>
+</div>
+<div class="bottom-line">
+<span class="old">Standard Price:</span>
+<span class="usd">$24.00 USD</span>
+</div>
+</div>
+
+<span class="popular-tag">MOST POPULAR</span>
+</label>
+<div class="details"></div>
+</section>
+
+<!-- 3 UNITS -->
+<section class="unit" data-units="3">
+<label class="unit-head">
+<input type="radio" name="unit" value="3">
+<span class="custom-radio"></span>
+
+<div class="unit-info">
+<div class="top-line">
+<span class="unit-name">3 Units</span>
+<span class="badge">30% Off</span>
+<span class="price">$27.00</span>
+</div>
+<div class="bottom-line">
+<span class="old">Standard Price:</span>
+<span class="usd">$36.00 USD</span>
+</div>
+</div>
+
+<span class="popular-tag">MOST POPULAR</span>
+</label>
+<div class="details"></div>
+</section>
+</form>
+
+<!-- SUMMARY & ACTION -->
+<div class="summary">
+<span class="delivery">Free Delivery</span>
+<span class="total">Total: <strong id="total">$09.00 USD</strong></span>
+</div>
+
+<button class="btn-cart">+ Add to Cart</button>
+
+<footer>@powered by pumper</footer>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
